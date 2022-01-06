@@ -4,23 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logi</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="login/style.css">
     
 </head>
 <body>
-    <main>
-        <header>
-            <h1>Login de Usuário</h1>
-        </header>
-        <article>
-            <h2>Usuário 1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut magnam repellat doloremque libero doloribus nihil quas laboriosam alias cum. Suscipit iste et quas quaerat laudantium at sed velit nesciunt aspernatur.</p>
-        </article>
-        <article>
-            <h2>Usuário 2</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam animi facere doloribus itaque totam quaerat iusto ratione atque a labore laboriosam deserunt cupiditate eum asperiores laborum, maxime adipisci, illo expedita?</p>
-        </article>
-    </main>
+    <div class="container">
+		<div class="container-login">
+			<div class="wrap-login">				
+				<form class="login-form">
+					
+					<span class="login-form-title">
+						Acesso ao sistema						
+					</span>
+					
+					<div class="wrap-input margin-top-35 margin-bottom-35">
+						<input class="input-form" type="text" name="email" autocomplete="off">
+						<span class="focus-input-form" data-placeholder="E-mail"></span>
+					</div>
+
+					<div class="wrap-input margin-bottom-35">
+						<input class="input-form" type="password" name="password">
+						<span class="focus-input-form" data-placeholder="Senha"></span>
+					</div>
+
+					<div class="container-login-form-btn">
+						<button class="login-form-btn">
+							Login
+						</button>
+					</div>
+
+					<ul class="login-utils">
+						<li class="margin-bottom-8 margin-top-8">
+							<span class="text1">
+								Esqueceu sua
+							</span>
+
+							<a href="#" class="text2">
+								senha?
+							</a>
+						</li>
+
+						<li>
+							<span class="text1">
+								Não tem conta?
+							</span>
+
+							<a href="#" class="text2">
+								Criar
+							</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<img src="login/images/login.png" width="300" height="300" class="margin-left-50" />
+		</div>
+	</div>
+
+    <script>
+		let inputs = document.getElementsByClassName('input-form');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script>
+
 </body>
 </html>
